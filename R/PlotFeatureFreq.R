@@ -6,6 +6,8 @@
 ########################################################################################################
 ########################################################################################################
 PlotFeatureFreqLine <- function (align.pos, feature.pos, min.pct=0.01) {
+  ## align.pos    2-column table with start/end positions of each alignment
+  ## feature.pos  2-column table with start/end positions of each vector feature; row names are unique feature names
   
   ## Sort features by their first base
   feature.pos <- feature.pos[order(feature.pos[, 2]), , drop=FALSE];
