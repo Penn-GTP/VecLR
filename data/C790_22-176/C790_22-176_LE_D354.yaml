@@ -1,0 +1,31 @@
+input:
+  genome:
+    rhesus:
+      bam: /project/gtplab/apps/development/R/package/VecLR/data/C790_22-176/C790_22-176_LE_D354_ref_map_enrich_sorted.bam # position indexed bam file
+      roi: 1:169382967-169390088 # [optional] specify regions to load; bed file or chr:start-end;chr:start-end;... load all if not given
+      ann: /project/gtplab/apps/development/R/package/VecLR/data/C790_22-176/region_ref.bed # [optional] annotated sub-regions; summarize alignment by annotated sub-regions if given; or the whole alignment if not given
+      ref: BSgenome.Mmulatta.UCSC.rheMac10
+  vector:
+    donor:
+      bam: /project/gtplab/apps/development/R/package/VecLR/data/C790_22-176/C790_22-176_LE_D354_donor_filtered.bam
+      roi: p6575:1-6732
+      ann: /project/gtplab/apps/development/R/package/VecLR/data/C790_22-176/region_vec.bed
+      ref: /project/gtplab/apps/development/R/package/VecLR/data/C790_22-176/seq_vec.fa
+    nuclease:
+      bam: /project/gtplab/apps/development/R/package/VecLR/data/C790_22-176/C790_22-176_LE_D354_nuclease_filtered.bam
+      roi: p5744:1-6439
+      ann: /project/gtplab/apps/development/R/package/VecLR/data/C790_22-176/region_vec.bed
+      ref: /project/gtplab/apps/development/R/package/VecLR/data/C790_22-176/seq_vec.fa
+    helper:
+      bam: /project/gtplab/apps/development/R/package/VecLR/data/C790_22-176/C790_22-176_LE_D354_helper_filtered.bam
+      roi: p1707:1-15770
+      ann: /project/gtplab/apps/development/R/package/VecLR/data/C790_22-176/region_vec.bed
+      ref: /project/gtplab/apps/development/R/package/VecLR/data/C790_22-176/seq_vec.fa
+    trans:
+      bam: /project/gtplab/apps/development/R/package/VecLR/data/C790_22-176/C790_22-176_LE_D354_trans_filtered.bam
+      roi: p0087:1-8036
+      ann: /project/gtplab/apps/development/R/package/VecLR/data/C790_22-176/region_vec.bed
+      ref: /project/gtplab/apps/development/R/package/VecLR/data/C790_22-176/seq_vec.fa
+output:
+  prefix: C790_22-176_LE_D354
+  

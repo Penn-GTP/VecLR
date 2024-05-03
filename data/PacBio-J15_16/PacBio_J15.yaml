@@ -1,0 +1,21 @@
+input:
+  genome:
+    rhesus:
+      bam:  # position indexed bam file
+      roi: chr4:106206017-106406288 # specify regions to load; bed file or chr:start-end;chr:start-end;... load all if not given
+      ann: region_ref.bed # annotated sub-regions; summarize alignment by annotated sub-regions if given; or the whole alignment if not given
+      ref: BSgenome.Mmusculus.UCSC.mm39.PCSK9.hExon7
+  vector:
+    donor:
+      bam: /project/gtplab/data_analysis/0_analyst/scerbin/LongRead/Pacbio/J15_J16/20240227/p5989_vec_seq_filtered_mapped_reads_sorted.bam
+      roi: pAAV.rhHDR-PCSK9_synthetic_circular_DNA:1-7316
+      ann: region_vec.bed
+      ref: /project/gtplab/data_analysis/meta_analysis/VC/metadata/ref/plasmid/p5989/p5989_vec_seq.fasta
+    nuclease:
+      bam: /project/gtplab/data_analysis/0_analyst/scerbin/LongRead/Pacbio/J15_J16/20240227/p5744_vec_seq_filtered_mapped_reads_sorted.bam
+      roi: pAAV.TBG.PI.PCS_Complementary_copy_of_pAAV.TBG.PI.PCS_7-8L.197.WPRE.bGH.KanR_(p5744)_#4:1-6439
+      ann: region_vec.bed
+      ref: /project/gtplab/data_analysis/meta_analysis/VC/metadata/ref/plasmid/p5744/p5744.fa
+output:
+  prefix: PacBio_J15
+  
